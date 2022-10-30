@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container">
+        <!--header-->
+        @RenderSection("Section1", false) <!-- özelleştirilmiş sectionlar oluşturma-->
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Header</h2>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            @RenderBody()
+            @RenderSection("Scripts", false) <!-- false parametresi bu section ın kullanılmak zorunda olmadığını gösterir-->
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <hr />
+                <h2>Footer</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
