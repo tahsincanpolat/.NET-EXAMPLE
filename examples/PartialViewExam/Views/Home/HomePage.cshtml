@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomePage</title>
+</head>
+<body>
+    <div> 
+        <h2>Anasayfa</h2>
+    </div>
+    <div>
+        <div>
+            <h5>Footer</h5>
+        </div>
+        <div>
+          <!-- Razor ile render partial -->  @{Html.RenderPartial("_PartialFaydaliLinkler"); }
+        </div>
+    </div>
+</body>
+</html>
