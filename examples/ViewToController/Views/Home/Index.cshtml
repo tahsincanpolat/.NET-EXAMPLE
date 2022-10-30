@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Home View To Controller</h2>
+<div>
+    @*
+        <form method="POST">
+        <b>Seçtiğiniz kişi: </b>
+        <select name="kisiler">
+            <option>Ali</option>
+            <option>Veli</option>
+        </select><br />
+        <b>Adınız</b> <input type="text" name="ad" /><br />
+        <b>Onaylıyorum</b> <input type="checkbox" name="onay" /><br />
+        </form>
+    *@
+    @{
+        SelectListItem[] liste = new SelectListItem[2]
+        {
+                new SelectListItem() { Text = "Ali"},
+                new SelectListItem() { Text = "Veli"},
+                    };
+    }
+    @using (Html.BeginForm())
+    {
+        @Html.TextBox("ad") <br />
+        @Html.DropDownList("kisiler", liste) <br />
+        @Html.CheckBox("onay") @( "Onaylıyorum") <br />
+        <input type="submit" value="Gönder" />
+
+    }
+
+</div>
+
