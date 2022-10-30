@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>About</title>
+</head>
+<body>
+    <div>
+        @Html.DropDownList("liste") <!-- htmldeki select option listboxına denk gelen Html Helperı-->
+        <b>Ad Soyad: </b> @Html.TextBox("text1")
+        <br />
+        <b>Bool veri türü: </b>@Html.CheckBox("check")
+    </div>
+    <div>
+        <input type="text" value="@ViewBag.text1" />
+    </div>
+</body>
+</html>
