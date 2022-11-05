@@ -1,0 +1,36 @@
+﻿@using ModelsModelBinding.Models  <!-- models klasörünü çağırdım -->
+@model Kisi
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomePage</title>
+</head>
+<body>
+    <div> 
+        <h1>Anasayfa</h1>
+    </div>
+    <div>
+        <b>Ad:</b> @Model.Ad<br />
+        <b>Soyad:</b> @Model.Soyad<br />
+        <b>Yaş:</b> @Model.Yas<br />
+        <b>Ad Soyad:</b> @(Model.Ad + " " + Model.Soyad)
+    </div>
+    <div>
+        <h4>Model Post Controller</h4>
+        @using (Html.BeginForm())
+        {
+            <b>Ad:</b> @Html.TextBoxFor(x => x.Ad)<br />
+            <b>Soyad:</b> @Html.TextBoxFor(x => x.Soyad)<br />
+            <b>Yaş:</b> @Html.TextBoxFor(x => x.Yas)<br />
+            <hr />
+            <input type="submit" value="Gönder" />
+        }
+    </div>
+</body>
+</html>

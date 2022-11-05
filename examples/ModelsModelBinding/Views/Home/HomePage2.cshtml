@@ -1,0 +1,23 @@
+﻿@using ModelsModelBinding.Models
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomePage2</title>
+</head>
+<body>
+    <div>
+        <b>Ad:</b> @Model.KisiNesnesi.Ad<br />
+        <b>Soyad:</b> @Model.KisiNesnesi.Soyad<br />
+        <b>Yaş:</b> @Model.KisiNesnesi.Yas<br />
+        <b>Adres Bilgileri :</b> @Model.AdresNesnesi.AdresTanim<br />
+        <b>Şehir :</b> @Model.AdresNesnesi.Sehir<br />
+
+    </div>
+</body>
+</html>
