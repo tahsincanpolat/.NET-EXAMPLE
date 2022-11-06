@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgrenciBilgiSistemi", "Ogre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personel", "Personel\Personel.csproj", "{EBD1F15F-D39D-4BA4-AAFC-B9EAE910DEA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing", "Routing\Routing.csproj", "{18DD26E0-9A5F-4630-8F17-FE7D869E9BF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{EBD1F15F-D39D-4BA4-AAFC-B9EAE910DEA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBD1F15F-D39D-4BA4-AAFC-B9EAE910DEA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBD1F15F-D39D-4BA4-AAFC-B9EAE910DEA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18DD26E0-9A5F-4630-8F17-FE7D869E9BF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18DD26E0-9A5F-4630-8F17-FE7D869E9BF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18DD26E0-9A5F-4630-8F17-FE7D869E9BF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18DD26E0-9A5F-4630-8F17-FE7D869E9BF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
