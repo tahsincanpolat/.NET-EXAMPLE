@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 
 namespace OgrenciBilgiSistemi.Controllers
 {
@@ -23,12 +24,23 @@ namespace OgrenciBilgiSistemi.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Ekle(Fakulte kayit)
+        // RedirectToRouteResult - Farklı bir action resulta yönlendirme işlemi yapar.
+        public RedirectToRouteResult Ekle(Fakulte kayit)
         {
             veritabani.Fakulteler.Add(kayit);
             veritabani.SaveChanges();
-            return RedirectToAction("Index","Fakulte");
+            return new RedirectToRouteResult(new RouteValueDictionary(new
+            {
+                action = "Ekle",
+                controller = "Fakulte"
+            }));
         }
+        //public ActionResult Ekle(Fakulte kayit)
+        //{
+        //    veritabani.Fakulteler.Add(kayit);
+        //    veritabani.SaveChanges();
+        //    return RedirectToAction("Index","Fakulte");
+        //}
 
         [HttpPost]
         public JsonResult Listele()
@@ -39,6 +51,19 @@ namespace OgrenciBilgiSistemi.Controllers
 
         public ActionResult FakultelerJson()
         {
+            return View();
+        }
+
+        public ActionResult Fakulteler()
+        {
+            var fakulteler = veritabani.Fakulteler.ToList().Select(f => new SelectListItem
+            {
+                Selected=false,
+                Text = f.FakulteAd,
+                Value = f.Id.ToString()
+            }).ToList();
+
+            ViewBag.Fakulteler = fakulteler;
             return View();
         }
     }

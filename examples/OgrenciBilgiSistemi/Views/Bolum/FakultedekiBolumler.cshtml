@@ -1,0 +1,30 @@
+﻿@model IEnumerable<OgrenciBilgiSistemi.Models.Bolum>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FakulteId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adres)
+            </th>
+        </tr>
+
+        @foreach (var item in (IEnumerable<OgrenciBilgiSistemi.Models.Bolum>)ViewBag.Bolumler)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FakulteId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Adres)
+                </td>
+            </tr>
+        }
+
+    </table>

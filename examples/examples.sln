@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelsModelBinding", "Model
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgrenciBilgiSistemi", "OgrenciBilgiSistemi\OgrenciBilgiSistemi.csproj", "{137F75C8-E48F-4D83-8106-DAC46C6A71D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personel", "Personel\Personel.csproj", "{EBD1F15F-D39D-4BA4-AAFC-B9EAE910DEA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{137F75C8-E48F-4D83-8106-DAC46C6A71D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{137F75C8-E48F-4D83-8106-DAC46C6A71D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{137F75C8-E48F-4D83-8106-DAC46C6A71D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBD1F15F-D39D-4BA4-AAFC-B9EAE910DEA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD1F15F-D39D-4BA4-AAFC-B9EAE910DEA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD1F15F-D39D-4BA4-AAFC-B9EAE910DEA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD1F15F-D39D-4BA4-AAFC-B9EAE910DEA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -80,3 +80,6 @@ D:\TahsinCanpolat\Web2\Repos\examples\OgrenciBilgiSistemi\obj\Debug\OgrenciBilgi
 D:\TahsinCanpolat\Web2\Repos\examples\OgrenciBilgiSistemi\obj\Debug\OgrenciBilgiSistemi.csproj.CopyComplete
 D:\TahsinCanpolat\Web2\Repos\examples\OgrenciBilgiSistemi\obj\Debug\OgrenciBilgiSistemi.dll
 D:\TahsinCanpolat\Web2\Repos\examples\OgrenciBilgiSistemi\obj\Debug\OgrenciBilgiSistemi.pdb
+D:\TahsinCanpolat\Web2\Repos\examples\OgrenciBilgiSistemi\obj\Debug\OgrenciBilgiSistemi.Migrations.InitialCreate.resources
+D:\TahsinCanpolat\Web2\Repos\examples\OgrenciBilgiSistemi\obj\Debug\OgrenciBilgiSistemi.csproj.GenerateResource.cache
+D:\TahsinCanpolat\Web2\Repos\examples\OgrenciBilgiSistemi\obj\Debug\OgrenciBilgiSistemi.Migrations.a.resources

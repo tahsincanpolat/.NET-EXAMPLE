@@ -13,6 +13,7 @@ namespace OgrenciBilgiSistemi.DAL
         public OBSContext() : base("OBSVeritabani") { }
 
         public DbSet<Fakulte> Fakulteler { get; set; }
+        public DbSet<Bolum> Bolumler { get; set; }
 
         // s takısını kaldırmak için
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

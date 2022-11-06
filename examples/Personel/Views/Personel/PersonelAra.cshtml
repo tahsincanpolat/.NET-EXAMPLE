@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "PersonelAra";
+}
+
+<h2>Personel Ara</h2>
+@using (Html.BeginForm("PersonelAramaSonucu", "Personel", FormMethod.Get))
+{
+    <input type="text" name="personelAra"/><br />
+    <input type="submit" value="Ara"/>
+}
+
