@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "UrunGetir";
+}
+
+<h2>Urun Getir</h2>
+
+<input type="text" id="urunId" />
+<br />
+<input type="button" id="urunGetir" value="Ürün Getir"/>
+
+<br />
+
+<div id="urun"></div>
+
+<script>
+    $(document).ready(function () {
+        $("#urunGetir").click(function () {
+            var urunId = $("#urunId").val();
+            $.getJSON('../api/urun/' + urunId)
+                .done(function (urun) {
+                    var urunBilgisi = "";
+                    console.log(urun);
+                    urunBilgisi += "Ürün Adı: " + urun.Ad + " Fiyat: " + urun.Fiyat + " TL" + " Stok Miktarı: " + urun.StokMiktari + "<br>";
+
+                    $("#urun").html(urunBilgisi);
+                })
+                .catch(function (error) {
+                  alert(error.statusText);
+                })
+        })
+    })
+</script>

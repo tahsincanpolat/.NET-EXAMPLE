@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "TumUrunler";
+}
+
+<h2>Tum Urunler</h2>
+<input type="button" id="urunleriListele" value="Ürünleri Listele"/>
+<div id="urunler"></div>
+
+<script>
+    $(document).ready(function () {
+        $("#urunleriListele").click(function () {
+            $.getJSON('../api/urun').done(function (veri) {
+                var urunler = "";
+                console.log(veri);
+                $.each(veri, function (key,urun) {
+                    urunler += "Ürün Adı: " + urun.Ad + " Fiyat: " + urun.Fiyat + " TL" + " Stok Miktarı: " + urun.StokMiktari + "<br>";
+                })
+
+                $("#urunler").html(urunler);
+            })
+        })
+    })
+</script>
+

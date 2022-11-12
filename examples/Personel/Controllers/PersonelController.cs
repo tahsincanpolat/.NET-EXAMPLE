@@ -18,6 +18,7 @@ namespace Personel.Controllers
 
         };
         // GET: Personel
+        
         public ActionResult Personel()
         {
             return View(PersonellerListesi);

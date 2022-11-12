@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personel", "Personel\Person
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing", "Routing\Routing.csproj", "{18DD26E0-9A5F-4630-8F17-FE7D869E9BF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{74BDC0BF-B0B2-45DC-96E6-FE7AD28403CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filtering", "Filtering\Filtering.csproj", "{86B151E7-B75D-45CA-A71E-6DBE949AF6BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{18DD26E0-9A5F-4630-8F17-FE7D869E9BF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18DD26E0-9A5F-4630-8F17-FE7D869E9BF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18DD26E0-9A5F-4630-8F17-FE7D869E9BF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74BDC0BF-B0B2-45DC-96E6-FE7AD28403CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74BDC0BF-B0B2-45DC-96E6-FE7AD28403CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74BDC0BF-B0B2-45DC-96E6-FE7AD28403CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74BDC0BF-B0B2-45DC-96E6-FE7AD28403CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86B151E7-B75D-45CA-A71E-6DBE949AF6BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86B151E7-B75D-45CA-A71E-6DBE949AF6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86B151E7-B75D-45CA-A71E-6DBE949AF6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86B151E7-B75D-45CA-A71E-6DBE949AF6BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
