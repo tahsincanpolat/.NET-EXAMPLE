@@ -26,6 +26,14 @@ namespace Routing
                url: "anasayfa",  // Bu url e gidildiğinde SiteController daki Anasayfa Methodu çalışır.
                defaults: new { controller = "Site", action = "Anasayfa", id = UrlParameter.Optional }
            );
+
+            routes.MapRoute(
+                name: "Kategori",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "HaberKategori", action="Anasayfa"}
+            );
+
+
         }
     }
 }
