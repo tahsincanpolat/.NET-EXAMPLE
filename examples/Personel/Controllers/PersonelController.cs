@@ -52,8 +52,17 @@ namespace Personel.Controllers
         [HttpPost]
         public ActionResult YeniPersonel(Personeller per)
         {
-            // Personel Ekle Methodu yazılacak 
-            return View();
+            Random rnd = new Random();
+
+            Personeller personel = new Personeller
+            {
+                Id = rnd.Next(),
+                Ad = per.Ad,
+                Soyad = per.Soyad,
+                TCKimlikNO = per.TCKimlikNO
+            };
+            PersonellerListesi.Add(personel);
+            return RedirectToAction("Personel","Personel");
         }
 
 
