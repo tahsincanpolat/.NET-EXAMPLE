@@ -1,0 +1,35 @@
+﻿@model IEnumerable<RssFeeder.Models.Haberler>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/styles.css" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h3 class="text-center">RSS Haberler</h3>
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 news">
+                    <a href="@item.HaberLink">
+                        <img class="news-image img-fluid" src="@item.HaberResim.Replace("file://","http://")" />
+                        <h5 class="heading"> @item.HaberBaslik</h5>
+                        <p class="well description"> @item.HaberAciklama</p>
+                        <h6 class="badge"> @item.HaberKategori</h6>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+   
+
+</body>
+</html>
