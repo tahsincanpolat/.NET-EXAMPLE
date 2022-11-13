@@ -11,5 +11,6 @@ namespace Filtering.Models
         public string Action { get; set; }
         public DateTime IslemTarihi { get; set; }
         public string Tip { get; set; }
+        public string HataMesaji { get; set; }
     }
 }

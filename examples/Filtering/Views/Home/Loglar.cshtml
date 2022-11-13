@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Filtering.Models.LogBilgi>
+
+@{
+    ViewBag.Title = "Loglar";
+}
+
+<h2>Loglar</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Controller)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Action)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IslemTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tip)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Controller)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Action)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IslemTarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tip)
+        </td>
+       
+    </tr>
+}
+
+</table>
