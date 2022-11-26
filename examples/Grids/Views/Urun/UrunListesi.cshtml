@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Grids.Models.Urun>
+@{
+    Layout = null;
+}
+@{
+    var grid = new WebGrid(Model,defaultSort:"Ad",rowsPerPage:5);
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UrunListesi</title>
+</head>
+<body>
+    <div>
+        @grid.GetHtml(
+            columns: grid.Columns(
+                grid.Column("Ad","Ürün Adı"),
+                grid.Column("Fiyat","Ürün Fiyatı"),
+                grid.Column("Adet","Ürün Adedi") 
+            ),mode:WebGridPagerModes.All
+       )
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UrunAra</title>
+</head>
+<body>
+    <div> 
+        <form method="Post">
+            Ürün adı : <input type="text" name="urunAd" value="@Request["urunAd"]" />
+            <input type="submit" value="Ara" />
+         </form>
+        @{ 
+            string urunAd = Request["urunAd"];
+            var urunler = Grids.Models.Veri.UrunSorgula(urunAd);
+            var grid = new WebGrid(urunler);
+        }
+        @grid.GetHtml()
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+@using System.Web.Helpers
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ChartTekVeri</title>
+</head>
+<body>
+    <div> 
+        <!--Web Helpers ile Tek veri içeren grafik oluşturacağım-->
+        @{ 
+            var grafik = new Chart(width:500,height:500);
+
+            grafik.AddTitle("1. Sınıflar Bahar Dönemi Not Ortalaması");
+
+            grafik.AddLegend(title:"Veriler");
+
+            grafik.AddSeries(
+                name: "ortalamar",
+                xValue: new[] {"BM101","BM102","BM103"},
+                yValues: new[] { 80,40,50 }
+            );
+
+            grafik.AddSeries(
+               name: "standart sapma",
+               xValue: new[] { "BM101", "BM102", "BM103" },
+               yValues: new[] { 40, 10, 70 }
+           );
+
+            grafik.AddSeries(
+              name: "sapma",
+              xValue: new[] { "BM101", "BM102", "BM103" },
+              yValues: new[] { 10, 15, 20 }
+          );
+
+            grafik.Write(format: "png");
+
+        }
+
+    </div>
+</body>
+</html>

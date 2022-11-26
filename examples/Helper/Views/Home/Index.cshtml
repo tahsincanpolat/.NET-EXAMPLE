@@ -1,0 +1,73 @@
+﻿@model Helper.Models.Kisi
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <!--<form method="post" action="ogrenci/kayit">
+    <input type="text"/>
+    <input type="submit" value="gönder"/>
+    </form>-->
+
+        @using (Html.BeginForm("Kayit", "Ogrenci", FormMethod.Post)) // Html Helper
+        {
+
+        }
+
+        @Html.ActionLink("Tıkla", "Kayit")  <!--a-->
+        @Html.Label("Test")
+        @Html.TextBox("ad") <!--input text-->
+        @Html.Password("parola") <!--input password-->
+        @Html.TextArea("adres") <!--textarea-->
+        @Html.TextBoxFor(Model => Model.Ad)
+
+        <select>
+            <option>Seçenek 1</option>
+            <option>Seçenek 2</option>
+        </select>
+
+
+        @Html.DropDownList("meslek",
+        new[]
+        {
+            new SelectListItem
+            {
+                Text = "İşçi",
+                Value= "1"
+            },
+             new SelectListItem
+            {
+                Text = "Öğrenci",
+                Value= "2"
+            },
+        }, "Bir Seçim yapınız"
+
+       )
+
+        @Html.ListBox("oda sayılar",
+       new[]
+       {
+           new SelectListItem
+           {
+               Text = "1+1",
+               Value= "1"
+           },
+            new SelectListItem
+           {
+               Text = "2+1",
+               Value= "2"
+           },
+       }
+      )
+
+    </div>
+</body>
+</html>
