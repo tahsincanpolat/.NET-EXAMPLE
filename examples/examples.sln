@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Images", "Images\Images.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grids", "Grids\Grids.csproj", "{8F38F93D-CEF4-4FB7-839B-12BB69101497}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateManagement", "StateManagement\StateManagement.csproj", "{20F79BDF-B937-4DA5-A9F9-413DA65274A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsTakipApp", "IsTakipApp\IsTakipApp.csproj", "{AFDAC66C-C25C-44B4-9339-22024C3B00F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +115,14 @@ Global
 		{8F38F93D-CEF4-4FB7-839B-12BB69101497}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F38F93D-CEF4-4FB7-839B-12BB69101497}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F38F93D-CEF4-4FB7-839B-12BB69101497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20F79BDF-B937-4DA5-A9F9-413DA65274A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F79BDF-B937-4DA5-A9F9-413DA65274A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F79BDF-B937-4DA5-A9F9-413DA65274A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F79BDF-B937-4DA5-A9F9-413DA65274A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFDAC66C-C25C-44B4-9339-22024C3B00F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFDAC66C-C25C-44B4-9339-22024C3B00F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFDAC66C-C25C-44B4-9339-22024C3B00F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFDAC66C-C25C-44B4-9339-22024C3B00F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

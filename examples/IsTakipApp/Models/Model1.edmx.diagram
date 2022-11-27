@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="255470bf2fa3438a945be9590e907db2" Name="Diagram1">
+        <EntityTypeShape EntityType="IsTakipDBModel.Birimler" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="IsTakipDBModel.Isler" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="IsTakipDBModel.Personeller" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IsTakipDBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IsTakipDBModel.Yetkiler" Width="1.5" PointX="8.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IsTakipDBModel.YetkiTurler" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="IsTakipDBModel.FK_Personeller_Birimler" ManuallyRouted="false" />
+        <AssociationConnector Association="IsTakipDBModel.FK_Yetkiler_Birimler" ManuallyRouted="false" />
+        <AssociationConnector Association="IsTakipDBModel.FK_Isler_Personeller" ManuallyRouted="false" />
+        <AssociationConnector Association="IsTakipDBModel.FK_Yetkiler_Personeller" ManuallyRouted="false" />
+        <AssociationConnector Association="IsTakipDBModel.FK_Yetkiler_YetkiTurler" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

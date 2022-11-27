@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>İş Takip Uygulaması</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="~/Content/stil.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+    @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @class = "form-signin" }))
+    {
+        <img class="mb-4" src="~/Content/img/login-logo.png" alt="" width="200" height="150">
+        <h1 class="h3 mb-3 font-weight-normal">Lütfen Giriş Yapınız</h1>
+        <label for="kullaniciAd" class="sr-only">Kullanıcı adınız</label>
+        <input type="text" id="kullaniciAd" name="kullaniciAd" class="form-control" placeholder="Kullanıcı Adınız" required autofocus>
+        <label for="parola" class="sr-only">Parola</label>
+        <input type="password" id="parola"  name="parola" class="form-control" placeholder="Parola" required>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Beni Hatırla
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Giriş Yap</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2022-2023</p>
+    }
+
+</body>
+</html>
