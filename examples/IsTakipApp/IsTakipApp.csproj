@@ -234,7 +234,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BaskanController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MudurController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -278,6 +280,18 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Views\Shared\_LayoutBaskan.cshtml" />
+    <Content Include="Views\Baskan\Index.cshtml" />
+    <Content Include="Views\Baskan\Ata.cshtml" />
+    <Content Include="Views\Baskan\TakipIlet.cshtml" />
+    <Content Include="Views\Baskan\Takip.cshtml" />
+    <Content Include="Views\Shared\_LayoutMudur.cshtml" />
+    <Content Include="Views\Mudur\Index.cshtml" />
+    <Content Include="Views\Mudur\Ilet.cshtml" />
+    <Content Include="Views\Mudur\Ata.cshtml" />
+    <Content Include="Views\Mudur\TakipIlet.cshtml" />
+    <Content Include="Views\Mudur\Takip.cshtml" />
+    <Content Include="Views\Mudur\Yap.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

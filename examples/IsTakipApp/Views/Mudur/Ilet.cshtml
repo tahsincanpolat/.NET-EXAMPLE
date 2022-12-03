@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Ilet";
+    Layout = "~/Views/Shared/_LayoutMudur.cshtml";
+}
+
+<div class="container">
+    <div class="jumbotron">
+        @using (Html.BeginForm("Ilet", "Mudur", FormMethod.Post))
+        {
+            <select id="selectPer" name="selectPer">
+                @foreach (var p in ViewBag.personeller)
+                {
+                    <option value="@p.personelId">@p.personelAd</option>
+                }
+            </select>
+            <br />
+            <br />
+            <button type="submit" class="btn btn-primary">Getir</button>
+        }
+    </div>
+
+</div>
+

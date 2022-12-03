@@ -28,6 +28,8 @@ namespace IsTakipApp.Controllers
 
                 var yetki = (from y in entity.Yetkiler where y.personelId == personel.personelId select y).FirstOrDefault();
 
+                Session["yetkiId"] = yetki.yetkiTurId;
+
                 if(yetki.yetkiTurId == 1)
                 {
                     return RedirectToAction("Index","Baskan");
