@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Yap";
+    Layout = "~/Views/Shared/_LayoutMemur.cshtml";
+}
+
+<div class="container">
+    <div>
+        @foreach (var tekIs in ViewBag.isler)
+        {
+            using (Html.BeginForm("Yap", "Memur", FormMethod.Post))
+            {
+                <div class="card">
+                    <div class="card-body">
+                        <input type="hidden" name="isId" value="@tekIs.isId" id="isId"/>
+                        @tekIs.isAciklama
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-success">Yapıldı</button>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+

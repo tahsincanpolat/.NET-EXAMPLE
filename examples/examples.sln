@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateManagement", "StateMan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsTakipApp", "IsTakipApp\IsTakipApp.csproj", "{AFDAC66C-C25C-44B4-9339-22024C3B00F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvrakTakipApp", "EvrakTakipApp\EvrakTakipApp.csproj", "{19B408F7-3972-46EB-8FD0-2D338443F09E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{AFDAC66C-C25C-44B4-9339-22024C3B00F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFDAC66C-C25C-44B4-9339-22024C3B00F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFDAC66C-C25C-44B4-9339-22024C3B00F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19B408F7-3972-46EB-8FD0-2D338443F09E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B408F7-3972-46EB-8FD0-2D338443F09E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B408F7-3972-46EB-8FD0-2D338443F09E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B408F7-3972-46EB-8FD0-2D338443F09E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

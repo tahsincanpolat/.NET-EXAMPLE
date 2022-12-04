@@ -236,6 +236,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BaskanController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MemurController.cs" />
     <Compile Include="Controllers\MudurController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -292,6 +293,10 @@
     <Content Include="Views\Mudur\TakipIlet.cshtml" />
     <Content Include="Views\Mudur\Takip.cshtml" />
     <Content Include="Views\Mudur\Yap.cshtml" />
+    <Content Include="Views\Shared\_LayoutMemur.cshtml" />
+    <Content Include="Views\Memur\Index.cshtml" />
+    <Content Include="Views\Memur\Yap.cshtml" />
+    <Content Include="Views\Memur\Takip.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

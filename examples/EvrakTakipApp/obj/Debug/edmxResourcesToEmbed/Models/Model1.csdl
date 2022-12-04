@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EvrakTakipDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Durumlar">
+    <Key>
+      <PropertyRef Name="durumId" />
+    </Key>
+    <Property Name="durumId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="durumAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Evraklar" Relationship="Self.FK_Evraklar_Durumlar" FromRole="Durumlar" ToRole="Evraklar" />
+    <NavigationProperty Name="Raporlar" Relationship="Self.FK_Raporlar_Durumlar" FromRole="Durumlar" ToRole="Raporlar" />
+  </EntityType>
+  <EntityType Name="Evraklar">
+    <Key>
+      <PropertyRef Name="evrakId" />
+    </Key>
+    <Property Name="evrakId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="evrakAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="perId" Type="Int32" />
+    <Property Name="evrakYol" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="evrakTarih" Type="DateTime" Precision="3" />
+    <Property Name="evrakDurumId" Type="Int32" />
+    <Property Name="evrakYerId" Type="Int32" />
+    <NavigationProperty Name="Durumlar" Relationship="Self.FK_Evraklar_Durumlar" FromRole="Evraklar" ToRole="Durumlar" />
+    <NavigationProperty Name="Yerler" Relationship="Self.FK_Evraklar_Yerler" FromRole="Evraklar" ToRole="Yerler" />
+    <NavigationProperty Name="Raporlar" Relationship="Self.FK_Raporlar_Evraklar" FromRole="Evraklar" ToRole="Raporlar" />
+  </EntityType>
+  <EntityType Name="Personeller">
+    <Key>
+      <PropertyRef Name="perId" />
+    </Key>
+    <Property Name="perId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="perAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="perKullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="perParola" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="perYetkiId" Type="Int32" />
+    <NavigationProperty Name="Yetkiler" Relationship="Self.FK_Personeller_Yetkiler" FromRole="Personeller" ToRole="Yetkiler" />
+    <NavigationProperty Name="Raporlar" Relationship="Self.FK_Raporlar_Personeller" FromRole="Personeller" ToRole="Raporlar" />
+  </EntityType>
+  <EntityType Name="Raporlar">
+    <Key>
+      <PropertyRef Name="raporId" />
+    </Key>
+    <Property Name="raporId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="personelId" Type="Int32" />
+    <Property Name="evrakId" Type="Int32" />
+    <Property Name="tarih" Type="DateTime" Precision="3" />
+    <Property Name="durumId" Type="Int32" />
+    <Property Name="yerId" Type="Int32" />
+    <NavigationProperty Name="Durumlar" Relationship="Self.FK_Raporlar_Durumlar" FromRole="Raporlar" ToRole="Durumlar" />
+    <NavigationProperty Name="Evraklar" Relationship="Self.FK_Raporlar_Evraklar" FromRole="Raporlar" ToRole="Evraklar" />
+    <NavigationProperty Name="Personeller" Relationship="Self.FK_Raporlar_Personeller" FromRole="Raporlar" ToRole="Personeller" />
+    <NavigationProperty Name="Yerler" Relationship="Self.FK_Raporlar_Yerler" FromRole="Raporlar" ToRole="Yerler" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Yerler">
+    <Key>
+      <PropertyRef Name="yerId" />
+    </Key>
+    <Property Name="yerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="yerAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Evraklar" Relationship="Self.FK_Evraklar_Yerler" FromRole="Yerler" ToRole="Evraklar" />
+    <NavigationProperty Name="Raporlar" Relationship="Self.FK_Raporlar_Yerler" FromRole="Yerler" ToRole="Raporlar" />
+  </EntityType>
+  <EntityType Name="Yetkiler">
+    <Key>
+      <PropertyRef Name="yetkiId" />
+    </Key>
+    <Property Name="yetkiId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="yetkiAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Personeller" Relationship="Self.FK_Personeller_Yetkiler" FromRole="Yetkiler" ToRole="Personeller" />
+  </EntityType>
+  <Association Name="FK_Evraklar_Durumlar">
+    <End Role="Durumlar" Type="Self.Durumlar" Multiplicity="0..1" />
+    <End Role="Evraklar" Type="Self.Evraklar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Durumlar">
+        <PropertyRef Name="durumId" />
+      </Principal>
+      <Dependent Role="Evraklar">
+        <PropertyRef Name="evrakDurumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Raporlar_Durumlar">
+    <End Role="Durumlar" Type="Self.Durumlar" Multiplicity="0..1" />
+    <End Role="Raporlar" Type="Self.Raporlar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Durumlar">
+        <PropertyRef Name="durumId" />
+      </Principal>
+      <Dependent Role="Raporlar">
+        <PropertyRef Name="durumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Evraklar_Yerler">
+    <End Role="Yerler" Type="Self.Yerler" Multiplicity="0..1" />
+    <End Role="Evraklar" Type="Self.Evraklar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Yerler">
+        <PropertyRef Name="yerId" />
+      </Principal>
+      <Dependent Role="Evraklar">
+        <PropertyRef Name="evrakYerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Raporlar_Evraklar">
+    <End Role="Evraklar" Type="Self.Evraklar" Multiplicity="0..1" />
+    <End Role="Raporlar" Type="Self.Raporlar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Evraklar">
+        <PropertyRef Name="evrakId" />
+      </Principal>
+      <Dependent Role="Raporlar">
+        <PropertyRef Name="evrakId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personeller_Yetkiler">
+    <End Role="Yetkiler" Type="Self.Yetkiler" Multiplicity="0..1" />
+    <End Role="Personeller" Type="Self.Personeller" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Yetkiler">
+        <PropertyRef Name="yetkiId" />
+      </Principal>
+      <Dependent Role="Personeller">
+        <PropertyRef Name="perYetkiId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Raporlar_Personeller">
+    <End Role="Personeller" Type="Self.Personeller" Multiplicity="0..1" />
+    <End Role="Raporlar" Type="Self.Raporlar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personeller">
+        <PropertyRef Name="perId" />
+      </Principal>
+      <Dependent Role="Raporlar">
+        <PropertyRef Name="personelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Raporlar_Yerler">
+    <End Role="Yerler" Type="Self.Yerler" Multiplicity="0..1" />
+    <End Role="Raporlar" Type="Self.Raporlar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Yerler">
+        <PropertyRef Name="yerId" />
+      </Principal>
+      <Dependent Role="Raporlar">
+        <PropertyRef Name="yerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EvrakTakipDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Durumlar" EntityType="Self.Durumlar" />
+    <EntitySet Name="Evraklar" EntityType="Self.Evraklar" />
+    <EntitySet Name="Personeller" EntityType="Self.Personeller" />
+    <EntitySet Name="Raporlar" EntityType="Self.Raporlar" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Yerler" EntityType="Self.Yerler" />
+    <EntitySet Name="Yetkiler" EntityType="Self.Yetkiler" />
+    <AssociationSet Name="FK_Evraklar_Durumlar" Association="Self.FK_Evraklar_Durumlar">
+      <End Role="Durumlar" EntitySet="Durumlar" />
+      <End Role="Evraklar" EntitySet="Evraklar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Raporlar_Durumlar" Association="Self.FK_Raporlar_Durumlar">
+      <End Role="Durumlar" EntitySet="Durumlar" />
+      <End Role="Raporlar" EntitySet="Raporlar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Evraklar_Yerler" Association="Self.FK_Evraklar_Yerler">
+      <End Role="Yerler" EntitySet="Yerler" />
+      <End Role="Evraklar" EntitySet="Evraklar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Raporlar_Evraklar" Association="Self.FK_Raporlar_Evraklar">
+      <End Role="Evraklar" EntitySet="Evraklar" />
+      <End Role="Raporlar" EntitySet="Raporlar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personeller_Yetkiler" Association="Self.FK_Personeller_Yetkiler">
+      <End Role="Yetkiler" EntitySet="Yetkiler" />
+      <End Role="Personeller" EntitySet="Personeller" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Raporlar_Personeller" Association="Self.FK_Raporlar_Personeller">
+      <End Role="Personeller" EntitySet="Personeller" />
+      <End Role="Raporlar" EntitySet="Raporlar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Raporlar_Yerler" Association="Self.FK_Raporlar_Yerler">
+      <End Role="Yerler" EntitySet="Yerler" />
+      <End Role="Raporlar" EntitySet="Raporlar" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

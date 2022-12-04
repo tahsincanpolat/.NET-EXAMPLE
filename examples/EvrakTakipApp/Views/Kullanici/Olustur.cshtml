@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Olustur";
+    Layout = "~/Views/Shared/_LayoutKullanici.cshtml";
+}
+
+<div>
+    <div class="card">
+        <div class="card-header">
+            Evrek Ekle
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("Olustur", "Kullanici", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+            {
+                <div class="form-group">
+                    <label for="evrakAd">Evrak Adı</label>
+                    <input type="text" class="form-control" id="evrakAd" name="evrakAd" />
+                </div>
+                <div class="form-group">
+                    <label for="yuklenecekDosya">Evrak</label>
+                    <input type="file" class="form-control-file" id="yuklenecekDosya" name="yuklenecekDosya" />
+                </div>
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+            }
+        </div>
+    </div>
+</div>
+

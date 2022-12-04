@@ -34,7 +34,7 @@ namespace IsTakipApp.Controllers
 
                 var personel = (from p in entity.Personeller where p.personelId == personelId select p).FirstOrDefault();
 
-                var personeller = (from per in entity.Personeller where per.personelBirimId == personel.personelBirimId select per).ToList();
+                var personeller = (from per in entity.Personeller where per.personelBirimId != personel.personelBirimId select per).ToList();
 
                 ViewBag.personeller = personeller;
 
