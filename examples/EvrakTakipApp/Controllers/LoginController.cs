@@ -9,7 +9,7 @@ namespace EvrakTakipApp.Controllers
 {
     public class LoginController : Controller
     {
-        EvrakTakipDBEntities entity = new EvrakTakipDBEntities();
+        EvrakTakipDBEntity entity = new EvrakTakipDBEntity();
         public ActionResult Index()
         {
             return View();
