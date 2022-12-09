@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kullanıcı</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="jumbotron">
+            @Html.ActionLink("Anasayfa", "Index", "OnMali", new { @class = "col-2 btn btn-primary" })
+            @Html.ActionLink("Bekleyen Evraklar", "Bekleyen", "OnMali", new { @class = "col-2 btn btn-primary" })
+            @Html.ActionLink("İncelenen Evraklar", "Incelenen", "OnMali", new { @class = "col-2 btn btn-primary" })
+            @Html.ActionLink("Hatalı Evraklar", "Hata", "OnMali", new { @class = "col-2 btn btn-primary" })
+            @Html.ActionLink("Başarılı Evraklar", "Basarili", "OnMali", new { @class = "col-2 btn btn-primary" })
+        </div>
+    </div>
+    <main role="main" class="container-fluid">
+        @RenderBody()
+    </main>
+</body>
+</html>

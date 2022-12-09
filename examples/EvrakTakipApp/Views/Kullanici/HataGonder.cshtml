@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Hata Gönder";
+    Layout = "~/Views/Shared/_LayoutKullanici.cshtml";
+}
+<h2>Hata Gönder</h2>
+<div class="container">
+    <div class="card">
+        @using (Html.BeginForm("HataGonder", "Kullanici", FormMethod.Post,new { enctype="multipart/form-data" }))
+        {
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="evrakAd">Evran Adı</label>
+                    <input type="text" class="form-control" id="evrakAd" name="evrakAd" value="@ViewBag.evrak.evrakAd" />
+                    <input type="hidden" id="evrakId" name="evrakId" value="@ViewBag.evrak.evrakId"/>
+                </div>
+            </div>
+            <div class="card-footer">
+                <label for="yuklenecekDosya">Evrak</label>
+                <input type="file" class="form-control-file" id="yuklenecekDosya" name="yuklenecekDosya"/>
+                <input type="submit" class="btn btn-success" value="Hata Gönder"/> 
+            </div>
+        }
+    </div>
+</div>
+

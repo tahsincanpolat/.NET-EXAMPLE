@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Takip";
+    Layout = "~/Views/Shared/_LayoutKullanici.cshtml";
+}
+
+<div class="container">
+    <div class="jumbotron">
+            @using (Html.BeginForm("Takip", "Kullanici", FormMethod.Post))
+            {
+                <select id="selectEvrak" name="selectEvrak">
+                    @foreach(var evrak in ViewBag.evraklar){
+                       <option value="@evrak.evrakId">@evrak.evrakAd</option>
+                    }
+                </select>
+                <button type="submit" class="btn btn-dark">Evrak Getir</button>
+            }
+    </div>
+</div>
+

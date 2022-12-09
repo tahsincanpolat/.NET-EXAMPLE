@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Liste";
+    Layout = "~/Views/Shared/_LayoutKullanici.cshtml";
+}
+<h2>Liste</h2>
+<div class="container">
+    @foreach (var rapor in ViewBag.raporlar)
+    {
+        <div class="card">
+            <div class="card-header">
+                @rapor.evrakAd
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">@rapor.personelAd</li>
+                    <li class="list-group-item">@rapor.tarih</li>
+                    <li class="list-group-item">@rapor.durumAd</li>
+                    <li class="list-group-item">@rapor.yerAd</li>
+                </ul>
+            </div>
+        </div>
+    }
+</div>
+
