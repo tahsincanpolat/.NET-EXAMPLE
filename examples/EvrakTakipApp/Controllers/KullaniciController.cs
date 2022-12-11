@@ -10,7 +10,7 @@ namespace EvrakTakipApp.Controllers
 {
     public class KullaniciController : Controller
     {
-        EvrakTakipDBEntity entity = new EvrakTakipDBEntity();
+        EvrakTakipDBEntities entity = new EvrakTakipDBEntities();
         // GET: Kullanici
         public ActionResult Index()
         {
