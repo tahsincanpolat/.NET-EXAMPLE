@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Başarılı";
+    Layout = "~/Views/Shared/_LayoutOnMali.cshtml";
+}
+<h2>Başarılı</h2>
+@foreach (var rapor in ViewBag.raporlar)
+{
+    <div class="card">
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">@rapor.personelAd</li>
+                <li class="list-group-item">@rapor.evrakAd</li>
+                <li class="list-group-item">@rapor.yerAd</li>
+            </ul>
+        </div>
+    </div>
+}
+

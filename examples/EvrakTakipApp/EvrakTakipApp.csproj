@@ -233,6 +233,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\KullaniciController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MuhasebeController.cs" />
     <Compile Include="Controllers\OnMaliController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -291,6 +292,19 @@
     <Content Include="Scripts\jquery-3.0.0.min.map" />
     <Content Include="Views\OnMali\Bekleyen.cshtml" />
     <Content Include="Views\OnMali\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutOnMali.cshtml" />
+    <Content Include="Views\OnMali\Incelenen.cshtml" />
+    <Content Include="Views\OnMali\Hata.cshtml" />
+    <Content Include="Views\Kullanici\Hata.cshtml" />
+    <Content Include="Views\Kullanici\HataGonder.cshtml" />
+    <Content Include="Views\Kullanici\Liste.cshtml" />
+    <Content Include="Views\Kullanici\Takip.cshtml" />
+    <Content Include="Views\OnMali\Basarili.cshtml" />
+    <Content Include="Views\Shared\_LayoutMuhasebe.cshtml" />
+    <Content Include="Views\Muhasebe\Incelenen.cshtml" />
+    <Content Include="Views\Muhasebe\Index.cshtml" />
+    <Content Include="Views\Muhasebe\Hata.cshtml" />
+    <Content Include="Views\Muhasebe\Basarili.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

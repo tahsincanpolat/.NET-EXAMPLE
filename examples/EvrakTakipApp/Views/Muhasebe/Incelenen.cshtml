@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Incelenen";
+    Layout = "~/Views/Shared/_LayoutMuhasebe.cshtml";
+}
+
+<h2>İncelenen Evraklar</h2>
+<div class="container">
+    @foreach (var evrak in ViewBag.evraklar)
+    {
+        using (Html.BeginForm("Incelenen", "Muhasebe", FormMethod.Post))
+        {
+            <div class="card">
+                <div class="card-header">
+                    <input type="hidden" id="evrakId" name="evrakId" value="@evrak.evrakId" />
+                    @evrak.evrakAd
+                </div>
+                <div class="card-body">
+                    <a href="@evrak.evrakYol" target="_blank">Belgeyi incele</a>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-outline-danger" type="submit" name="btnHatali">Hatalı</button>
+                    <button class="btn btn-outline-success" type="submit" name="btnBasarili">Başarılı</button>
+                </div>
+            </div>
+        }
+
+    }
+</div>
